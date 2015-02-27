@@ -9,14 +9,14 @@
   }
   .sensor-value {
       font-size: 60px;
-      color: gray;
+      color: black;
       text-align: center;
   }
   .buttonchoice {
       padding: 2px 2px;
   }
   .darkness {
-      background-color: black;
+      background-color: lightblue;
   }
 
   .rotate-right-45 {
