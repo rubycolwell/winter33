@@ -57,7 +57,9 @@
             //console.log("togglesensors");
             $("#allsensors").toggleClass('hidden');
         });
-        var socket = io.connect('http://10.48.102.108:3001');
+        //var socket = io.connect('http://10.48.102.108:3001');
+         var socket = io.connect(config().url); //change this to match your robot
+
         batterycapacity(socket);
         leftsignal(socket);
         front_leftsignal(socket);
@@ -268,29 +270,7 @@
 
         </div>
         <div class="row">
-              <h3>BATTERY</h3>
-        <div class="row">
-            <div class="col-xs-2 sensor-block">
-                <div class="sensor-title">Charging</div>
-                <div class="sensor-value" id="charging">...</div>
-            </div>
-            <div class="col-xs-2 sensor-block">
-                <div class="sensor-title">Current</div>
-                <div class="sensor-value" id="current">...</div>
-            </div>
-            <div class="col-xs-2 sensor-block">
-                <div class="sensor-title">Power</div>
-                <div class="sensor-value" id="power">...</div>
-            </div>
-            <div class="col-xs-2 sensor-block">
-                <div class="sensor-title">Capacity %</div>
-                <div class="sensor-value" id="batCapPer">...</div>
-            </div>
-            <div class="col-xs-2 sensor-block">
-                <div class="sensor-title">Temp F</div>
-                <div class="sensor-value" id="tempF">...</div>
-            </div>
-        </div>
+       
 
             <div class="col-xs-3 sensor-block col-xs-offset-1">
                 <div class="sensor-title">Voltage</div>
@@ -309,19 +289,20 @@
 
     
  <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="http://saasmath.seattleacademy.org/rubycolwell/winter33/demos/birthdaysong.html"><i class="fa fa-fw fa-dashboard"></i><font color="black"> BIRTHDAY SONG </font></a>
+                        <a href="http://saasmath.seattleacademy.org/rubycolwell/winter33/demos/birthdaysong.html"><i class="fa fa-fw fa-dashboard"></i><p><b><font color="black" <font size="4"> BIRTHDAY SONG </font></p></b></a>
                     </li>
                     <li>
-                        <a href="http://saasmath.seattleacademy.org/rubycolwell/winter33/demos/batterysensors.html"><i class="fa fa-fw fa-bar-chart-o"></i><font color="black"> BATTERY SENSOR </font></a>
+                        <a href="http://saasmath.seattleacademy.org/rubycolwell/winter33/demos/batterysensors.html"><i class="fa fa-fw fa-bar-chart-o"></i><p><b><font color="black" <font size="4"> BATTERY SENSOR </font></p></b></a>
                     </li>
                     <li>
-                        <a href="http://saasmath.seattleacademy.org/garyanderson/winter33/demos/donut.html"><i class="fa fa-fw fa-table"></i><font color="black"> DONUT </font></a>
+                        <a href="http://saasmath.seattleacademy.org/garyanderson/winter33/demos/donut.html"><i class="fa fa-fw fa-table"></i><p><b><font color="black"  <font size="4"> DONUT </font></p></b></a>
                     </li>
                     <li>
-                        <a href="http://saasmath.seattleacademy.org/garyanderson/winter33/demos/playdouble.html"><i class="fa fa-fw fa-edit"></i><font color="black"> PLAY DOUBLE </font></a>
+                        <a href="http://saasmath.seattleacademy.org/garyanderson/winter33/demos/playdouble.html"><i class="fa fa-fw fa-edit"></i><p><b><font color="black"  <font size="4"> PLAY DOUBLE </font></p></b></a>
                     </li>
                     <li>
                     
@@ -409,7 +390,7 @@
             <div class="col-md-3" id="frontrightdata" style="height:300px">.....</div>
             <div class="col-md-3" id="rightdata" style="height:300px">.....</div>
         </div>
-        <div class="col-md-3" id="batterycapacity" style="height:300px">bat</div>
+        <div class="col-md-3" id="batterycapacity" style="height:300px"></div>
 
         <div class="row">
             <div class="col-xs-6">
